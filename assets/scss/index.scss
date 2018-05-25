@@ -1,0 +1,88 @@
+@import "mixin";
+
+// variables
+$headerColor : #673ab7;
+$Background : #fafafa;
+
+
+ * {
+	margin: 0;
+	padding: 0;
+	color: $Background; 
+}
+
+body {
+	background-color: $Background;
+}
+
+#header {
+	font-size: 1.5em;
+	margin-top: 0px;
+	position: fixed;
+	top : 0;
+	height: 10vh;
+	width: 100vw;
+	margin-top: 0px;
+	color: #fafafa;
+	background-color: $headerColor;
+	box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12), 0 1px 1px 0 rgba(0,0,0,.24);
+	font-family: Times New Roman;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;	
+}
+
+#container {
+	display: grid;
+	margin-top: 11vh;	
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#ham-menu {
+	display: none;
+}
+
+.tile {
+	height: 30vh;
+	border-radius : 5px;
+	overflow : hidden;
+	&:hover {
+		cursor : pointer;
+	}
+}
+
+img {
+	height: inherit;
+	width: 100%;
+}
+
+.menu:hover > span {
+	cursor: pointer;
+}
+
+#fab {
+	height: 10vh;
+	width: 10vh;
+	border-radius: 50px;
+	background-color: #673ab7;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	right: 0;
+	bottom: 0;
+	margin-right: 3vh;
+	margin-bottom: 3vh;
+	position: fixed;
+	font-size: 3em;
+	color: white;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+
+@include mQ;
+
